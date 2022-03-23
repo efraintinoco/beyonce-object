@@ -25,17 +25,28 @@ const beyonceHash = {
   ]
 };
 
-// 1. Print all the songs
+ // 1. Print all the songs
 function printAllSongs() {
+  const hitTitles = beyonceHash.hits.forEach(hit => console.log(hit))
+  
 }
+printAllSongs()
+
 
 // 2. Print all the movies
+
 function printAllMovies() {
+  const hitMovies = beyonceHash.movies.forEach(movie => console.log(movie))     
+  
 }
+printAllMovies() 
 
 // 3. Return an array of all Beyonce's hit song titles
 function hitSongTitles() {
-}
+  return beyonceHash.hits.map(song => song.title)
+
+} 
+hitSongTitles()
 
 // 4. Return an array of all Beyonce's fierceness ratings
 function allFiercenessRatings() {
