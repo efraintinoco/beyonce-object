@@ -46,11 +46,16 @@ function hitSongTitles() {
   return beyonceHash.hits.map(song => song.title)
 
 } 
+console.log(hitSongTitles())
+
 hitSongTitles()
 
 // 4. Return an array of all Beyonce's fierceness ratings
 function allFiercenessRatings() {
+
+  return beyonceHash.hits.map(hit => hit.fierceness) 
 }
+console.log(allFiercenessRatings())
 
 // 5. Return all the songs where Beyonce is wearing a bodysuit or a bodysuit is part of the video theme
 function songsWithBodySuits() {
