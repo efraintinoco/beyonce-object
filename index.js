@@ -59,19 +59,27 @@ console.log(allFiercenessRatings())
 
 // 5. Return all the songs where Beyonce is wearing a bodysuit or a bodysuit is part of the video theme
 function songsWithBodySuits() {
+  return beyonceHash.hits.filter(hit => hit.signature_look.includes("bodysuit") || hit.video_theme.includes("bodysuit"))
 }
+console.log(songsWithBodySuits())
 
 // 6. Return an array with all of the songs where Beyonce's fierceness is greater than or equal to a given number
 function getSongsByFiercenessGTE() {
+  return beyonceHash.hits.filter(hit => hit.fierceness >= 0)
 }
+console.log(getSongsByFiercenessGTE())
 
 // 7. Return an array with all of the movies Beyonce made after or during a given year
 function getMoviesByDateGTE() {
+  return beyonceHash.movies.filter(movie => movie.year >= 2005)     
 }
+console.log(getMoviesByDateGTE())
 
 // 8. Return all hit songs where Beyonce was in a group
 function groupHits() {
+  return beyonceHash.hits.filter(hit => hit.group === true)
 }
+console.log(groupHits())
 
 // 9. Return a hit song where Beyonce's hair is blonde
 function findBlondeHit() {
