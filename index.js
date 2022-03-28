@@ -83,43 +83,66 @@ console.log(groupHits())
 
 // 9. Return a hit song where Beyonce's hair is blonde
 function findBlondeHit() {
-}
+  return beyonceHash.hits.find(hit => hit.hair.includes ("blonde"))
+  
+} 
+console.log(findBlondeHit())
 
 // 10. Return the hit song "Sorry"
 function sorry() {
+  return beyonceHash.hits.find(hit => hit.title === ('Sorry'))
 }
+console.log(sorry())
 
 // 11. Return a given song
 function getSong() {
+  return beyonceHash.hits.find(hit => hit.title)
 }
+console.log(getSong())
 
 // 12. Return all hit songs where Beyonce's fierceness rating is 10
 function fiercestHits() {
+  return beyonceHash.hits.filter(hit => hit.fierceness === 10)
 }
+console.log(fiercestHits())
 
 // 13. Return the sum of Beyonce's fierceness value for all of her hit songs
 function hitFiercenessSum() {
-}
-
+ 
+    return allFiercenessRatings().reduce((sum,number)=> {return sum + number},0)
+  }
+ console.log(hitFiercenessSum()) 
+  
 // 14. Return the average fierceness value for all Beyonce's hit songs
 function hitFiercenessAverage() {
+  return hitFiercenessSum() / beyonceHash.hits.length
 }
+console.log (hitFiercenessAverage())
 
 // 15. Return the sum of Beyonce's rating value for all of her movies
 function ratingSum() {
+ return beyonceHash.movies.map(movie => movie.rating).reduce((sum,number) => {return sum + number},0) 
+
 }
+console.log (ratingSum())
 
 // 16. Return the average rating value for all of her movies
 function ratingAverage() {
+  return ratingSum()/beyonceHash.movies.length
 }
+console.log(ratingAverage())
 
 // 17. Return the sum of the total number of dancers in all of the hit song videos
 function hitDancerSum() {
+  return beyonceHash.hits.map(hit => hit.dancers).reduce((sum,number) => {return sum + number}, 0)
 }
+console.log(hitDancerSum())
 
 // 18. Return an array of Beyonce's hairstyles without repeats
 function uniqueHairstyles() {
+ 
 }
+console.log (uniqueHairstyles())
 
 // 19. Return an object where the properties are song names and the value is an object which contains that song's fierceness and the average fierceness for all songs
 function songFiercenessByName() {
